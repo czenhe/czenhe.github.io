@@ -1,0 +1,8 @@
+{
+	"homepage.title": "Hello, World!",
+	"homepage.welcome": "Hi <strong>{{name}}</strong>, how are you?",
+	"homepage.time": "The current time is: {{time}}",
+	"about.text1": "",
+  "about.text2": "",
+  "about.text3": ""
+}

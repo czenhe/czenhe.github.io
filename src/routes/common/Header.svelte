@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
 	import logo from '$lib/images/lion.png';
 	import GlobalNav from './GlobalNav.svelte';
+	import { locale, locales } from '$lib/locales/i18n';
 </script>
 
 <header>
@@ -12,6 +13,12 @@
 	</div>
 
 	<GlobalNav />
+
+	<select bind:value={$locale}>
+		{#each locales as l}
+			<option value={l}>{l}</option>
+		{/each}
+	</select>
 </header>
 
 <style lang="scss">
