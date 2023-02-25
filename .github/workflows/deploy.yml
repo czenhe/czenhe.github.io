@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -23,13 +23,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "v16.17.0"
+          node-version: 'v16.17.0'
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1
       - name: Install dependencies
         run: npm ci
-      - name:  build static resources
+      - name: build static resources
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -49,29 +49,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   concurrency:
-  #     group: ${{ github.workflow }}-${{ github.ref }}
-  #   steps:
-  #     - uses: actions/checkout@v3
-
-  #     - name: setup node.js
-  #       uses: actions/setup-node@v3.6.0
-  #       with:
-  #         node-version: 'v16.17.0'
-  #         cache: npm
-
-  #     - name: setup app env
-  #       run: npm ci
-
-  #     - name: build static resources
-  #       run: npm run build
-
-  #     - name: deploy to github pages
-  #       uses: peaceiris/actions-gh-pages@v3
-  #       if: ${{ github.ref == 'refs/heads/main' }}
-  #       with:
-  #         github_token: ${{ secrets.GITHUB_TOKEN }}
-  #         publish_dir: build
