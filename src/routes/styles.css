@@ -1,5 +1,5 @@
 @import '@fontsource/fira-mono';
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Homemade+Apple&family=Nanum+Pen+Script&display=swap');
 :root {
     color: var(--color-text);
     font-family: var(--font-body);
@@ -9,6 +9,7 @@
     --font-mono: 'Fira Mono', monospace;
     --font-homemade-apple: 'Homemade Apple', cursive;
     --font-nanum: 'Nanum Pen Script', cursive;
+    --font-himelody: 'Hi Melody', cursive;
     --color-bg-0: rgb(247, 220, 215);
     --color-bg-1: hsl(0, 0%, 100%);
     --color-bg-2: hsl(0, 0%, 100%);

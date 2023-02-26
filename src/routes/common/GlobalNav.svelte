@@ -4,11 +4,17 @@
 
 <nav>
 	<ul>
-		<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-			<a href="/">Home</a>
-		</li>
 		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 			<a href="/about">About</a>
+		</li>
+		<li aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
+			<a href="/essay">Essay</a>
+		</li>
+		<li aria-current={$page.url.pathname === '/study' ? 'page' : undefined}>
+			<a href="/study">Study</a>
+		</li>
+		<li aria-current={$page.url.pathname === '/project' ? 'page' : undefined}>
+			<a href="/project">Project</a>
 		</li>
 	</ul>
 </nav>

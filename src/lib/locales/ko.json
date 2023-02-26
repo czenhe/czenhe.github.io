@@ -1,4 +1,5 @@
 {
+  "common.comingsoon": "준비중",
 	"homepage.title": "안녕하세요",
 	"homepage.welcome": "Hi <strong>{{name}}</strong>, how are you?",
 	"homepage.time": "The current time is: {{time}}",
