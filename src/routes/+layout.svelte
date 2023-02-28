@@ -1,7 +1,7 @@
 <script>
-	import Header from './common/Header.svelte';
-	import Footer from './common/Footer.svelte';
-	import './styles.css';
+	import Header from '$components/Header.svelte';
+	import Footer from '$components/Footer.svelte';
+	import '$styles/styles.css';
 </script>
 
 <div class="app">
