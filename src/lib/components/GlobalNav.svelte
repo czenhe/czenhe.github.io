@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-  import { onDestroy } from 'svelte';
   import { afterNavigate } from '$app/navigation';
   let isOpen: boolean = false;
   let isVisible: boolean = false;
@@ -18,26 +17,26 @@
 </script>
 
 <nav class="menu-button {isOpen ? 'is-open' : ''}" on:click={switchOpen} aria-hidden="true"></nav>
-<nav class="navigation js-menu {isVisible ? 'is-visible' : ''}">
-  <ul class="navigation-items">
-    <li class="navigation-item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+<nav class="navigation {isVisible ? 'is-visible' : ''}">
+  <ul class="items">
+    <li class="item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
       <a href="/about">About</a>
     </li>
-    <li class="navigation-item" aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
+    <li class="item" aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
       <a href="/essay">Essay</a>
     </li>
-    <li class="navigation-item" aria-current={$page.url.pathname === '/study' ? 'page' : undefined}>
+    <li class="item" aria-current={$page.url.pathname === '/study' ? 'page' : undefined}>
       <a href="/study">Study</a>
     </li>
-    <li class="navigation-item" aria-current={$page.url.pathname === '/project' ? 'page' : undefined}>
+    <li class="item" aria-current={$page.url.pathname === '/project' ? 'page' : undefined}>
       <a href="/project">Project</a>
     </li>
   </ul>
-  <!-- <ul class="sub-navigation-items">
-    <li class="sub-navigation-item">
+  <!-- <ul class="sub-items">
+    <li class="sub-item">
       <a href="/" target="_blank" rel="noopener noreferrer">Youtube</a>
     </li>
-    <li class="sub-navigation-item">
+    <li class="sub-item">
       <a href="/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </li>
   </ul>
@@ -100,14 +99,14 @@
     top: 20px;
     right: 20px;
     padding: 8px 12px;
-    &-items {
+    .items {
       display: flex;
       padding: 0 30px;
       border: 1px solid var(--color-theme-1);
       border-radius: 22px;
       background-color: var(--color-theme-1);
     }
-    &-item {
+    .item {
 		  font-family: var(--font-nanum);
       color: var(--color-theme-3);
       margin: 0 10px;
@@ -119,7 +118,7 @@
     }
   }
 
-  .sub-navigation-items {
+  .sub-items {
     display: none;
     margin-top: 40px;
   }
@@ -144,7 +143,8 @@
       right: 0;
       bottom: 0;
       padding: 128px 20px 20px;
-      &-items {
+      z-index: 10;
+      .items {
         display: block;
         padding-left: 0;
         padding-right: 0;
@@ -152,13 +152,13 @@
         border: none;
         border-radius: 0;
       }
-      &-item {
+      .item {
         margin-top: 16px;
         margin-left: 0;
         margin-right: 0;
         padding-top: 0;
         padding-bottom: 0;
-        background-position: center left;
+        text-align: center;
         & > a {
         display: block;
         height: 100%;
@@ -173,7 +173,7 @@
         background-color: var(--color-theme-1);
       }
     }
-    .sub-navigation-items {
+    .sub-items {
         display: block;
     }
     .twitter-navigation {

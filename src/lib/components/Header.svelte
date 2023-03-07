@@ -1,7 +1,6 @@
 <script lang="ts">
 	import logo from '$lib/images/lion.png';
 	import GlobalNav from './GlobalNav.svelte';
-	// import LocaleSwitch from './LocaleSwitch.svelte';
 </script>
 
 <header>
@@ -14,7 +13,6 @@
 
 	<GlobalNav />
 
-	<!-- <LocaleSwitch /> -->
 </header>
 
 <style lang="scss">
