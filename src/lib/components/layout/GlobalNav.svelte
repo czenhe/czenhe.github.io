@@ -2,8 +2,8 @@
   import { page } from '$app/stores';
   import { onDestroy } from 'svelte';
   import { afterNavigate } from '$app/navigation';
-  let isOpen: boolean = false;
-  let isVisible: boolean = false;
+  let isOpen = false;
+  let isVisible = false;
   const switchOpen = () => {
     isOpen = !isOpen;
     isVisible = !isVisible;
@@ -126,18 +126,18 @@
   }
 
   /* .sub-navigation-items {
-      display: none;
-      margin-top: 40px;
-    }
-    .twitter-navigation {
-      display: none;
-      position: relative;
-      margin-top: auto;
-      padding-left: 28px;
-      font-size: 12px;
-      line-height: 24px;
-      color: #fff;
-    } */
+        display: none;
+        margin-top: 40px;
+      }
+      .twitter-navigation {
+        display: none;
+        position: relative;
+        margin-top: auto;
+        padding-left: 28px;
+        font-size: 12px;
+        line-height: 24px;
+        color: #fff;
+      } */
   @media screen and (max-width: 1000px) {
     .menu-button {
       display: block;
@@ -180,10 +180,10 @@
       }
     }
     /* .sub-navigation-items {
+            display: block;
+        }
+        .twitter-navigation {
           display: block;
-      }
-      .twitter-navigation {
-        display: block;
-      } */
+        } */
   }
 </style>

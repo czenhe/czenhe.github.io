@@ -16,5 +16,11 @@ module.exports = {
     browser: true,
     es2017: true,
     node: true
+  },
+  rules: {
+    'no-unused-vars': 'off',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-unused-vars': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off']
   }
 };

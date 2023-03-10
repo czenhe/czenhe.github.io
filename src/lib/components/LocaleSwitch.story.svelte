@@ -7,8 +7,8 @@
 
 <Hst.Story title="LocaleSwitch" layout={{ type: 'single', iframe: true }}>
   <Hst.Variant title="default">
-    <LocaleSwitch />🚗</Hst.Variant
-  >
+    <LocaleSwitch />🚗
+  </Hst.Variant>
   <Hst.Variant title="Fast">🏎️</Hst.Variant>
   <Hst.Variant title="Slow">🚜</Hst.Variant>
 </Hst.Story>
