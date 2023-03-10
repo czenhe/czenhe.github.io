@@ -1,8 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { onDestroy } from 'svelte';
   import { afterNavigate } from '$app/navigation';
-  let isOpen = false;
-  let isVisible = false;
+  let isOpen: boolean = false;
+  let isVisible: boolean = false;
   const switchOpen = () => {
     isOpen = !isOpen;
     isVisible = !isVisible;
@@ -17,26 +18,29 @@
 </script>
 
 <nav class="menu-button {isOpen ? 'is-open' : ''}" on:click={switchOpen} aria-hidden="true" />
-<nav class="navigation {isVisible ? 'is-visible' : ''}">
-  <ul class="items">
-    <li class="item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+<nav class="navigation js-menu {isVisible ? 'is-visible' : ''}">
+  <ul class="navigation-items">
+    <li class="navigation-item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
       <a href="/about">About</a>
     </li>
-    <li class="item" aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
+    <li class="navigation-item" aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
       <a href="/essay">Essay</a>
     </li>
-    <li class="item" aria-current={$page.url.pathname === '/study' ? 'page' : undefined}>
+    <li class="navigation-item" aria-current={$page.url.pathname === '/study' ? 'page' : undefined}>
       <a href="/study">Study</a>
     </li>
-    <li class="item" aria-current={$page.url.pathname === '/project' ? 'page' : undefined}>
+    <li
+      class="navigation-item"
+      aria-current={$page.url.pathname === '/project' ? 'page' : undefined}
+    >
       <a href="/project">Project</a>
     </li>
   </ul>
-  <!-- <ul class="sub-items">
-    <li class="sub-item">
+  <!-- <ul class="sub-navigation-items">
+    <li class="sub-navigation-item">
       <a href="/" target="_blank" rel="noopener noreferrer">Youtube</a>
     </li>
-    <li class="sub-item">
+    <li class="sub-navigation-item">
       <a href="/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </li>
   </ul>
@@ -44,7 +48,6 @@
 </nav>
 
 <style lang="scss">
-  ol,
   ul {
     list-style-type: none;
   }
@@ -103,14 +106,14 @@
     top: 20px;
     right: 20px;
     padding: 8px 12px;
-    .items {
+    &-items {
       display: flex;
       padding: 0 30px;
       border: 1px solid var(--color-theme-1);
       border-radius: 22px;
       background-color: var(--color-theme-1);
     }
-    .item {
+    &-item {
       margin: 0 10px;
       padding: 8px 0 6px;
       color: var(--color-theme-3);
@@ -122,19 +125,19 @@
     }
   }
 
-  .sub-items {
-    display: none;
-    margin-top: 40px;
-  }
-  .twitter-navigation {
-    display: none;
-    position: relative;
-    margin-top: auto;
-    padding-left: 28px;
-    color: #fff;
-    font-size: 12px;
-    line-height: 24px;
-  }
+  /* .sub-navigation-items {
+      display: none;
+      margin-top: 40px;
+    }
+    .twitter-navigation {
+      display: none;
+      position: relative;
+      margin-top: auto;
+      padding-left: 28px;
+      font-size: 12px;
+      line-height: 24px;
+      color: #fff;
+    } */
   @media screen and (max-width: 1000px) {
     .menu-button {
       display: block;
@@ -142,13 +145,12 @@
     .navigation {
       display: none;
       position: fixed;
-      z-index: 10;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       padding: 128px 20px 20px;
-      .items {
+      &-items {
         display: block;
         padding-right: 0;
         padding-left: 0;
@@ -156,13 +158,13 @@
         border-radius: 0;
         background-color: var(--color-theme-1);
       }
-      .item {
+      &-item {
         margin-top: 16px;
         margin-right: 0;
         margin-left: 0;
         padding-top: 0;
         padding-bottom: 0;
-        text-align: center;
+        background-position: center left;
         & > a {
           display: block;
           height: 100%;
@@ -177,11 +179,11 @@
         justify-content: space-between;
       }
     }
-    .sub-items {
-      display: block;
-    }
-    .twitter-navigation {
-      display: block;
-    }
+    /* .sub-navigation-items {
+          display: block;
+      }
+      .twitter-navigation {
+        display: block;
+      } */
   }
 </style>

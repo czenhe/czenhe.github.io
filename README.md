@@ -1,18 +1,34 @@
-# create-svelte
+# czenhe.me
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+SvelteKit을 이용한 개인 프로젝트 사이트
 
-## Creating a project
+## Documents for Development
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Svelte & SvelteKit + TypeScript
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Vite
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### ESLint Prettier Husky
+
+### Histoire
+
+### Notion & NotionAPI
+
+### E2E Test Cypress
+
+### axios
+
+### i18n
+
+### Github pages
+
+### Domain Setting
+
+- CNAME
+
+### SEO
+
+- svelte seo
 
 ## Developing
 

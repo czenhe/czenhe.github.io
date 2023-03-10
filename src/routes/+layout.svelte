@@ -1,34 +1,34 @@
 <script>
-	import Header from '$components/Header.svelte';
-	import Footer from '$components/Footer.svelte';
-	import '$styles/styles.css';
+  import Header from '$components/layout/Header.svelte';
+  import Footer from '$components/layout/Footer.svelte';
+  import '$styles/styles.css';
 </script>
 
 <div class="app">
-	<Header />
+  <Header />
 
-	<main>
-		<slot />
-	</main>
+  <main>
+    <slot />
+  </main>
 
-	<Footer />
+  <Footer />
 </div>
 
 <style lang="scss">
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+  .app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  main {
+    display: flex;
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex: 1;
+    flex-direction: column;
+  }
 </style>
