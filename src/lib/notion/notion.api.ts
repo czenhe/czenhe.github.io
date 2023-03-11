@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
 import { appConfig } from '../config.server';
 
-const { token, databaseId: notionDatabaseId } = appConfig.notion;
+const { token, databaseId } = appConfig.notion;
 
 /**
  * Initialize the Notion client
@@ -15,9 +15,7 @@ export const notionClient = new Client({
  * @param databaseId
  * @returns
  */
-export const getDatabase = async (databaseId = notionDatabaseId.essay) => {
-  console.log('token', token);
-  console.log('databaseId', databaseId);
+export const getDatabase = async (databaseId: string) => {
   const { results } = await notionClient.databases.query({
     database_id: databaseId
   });

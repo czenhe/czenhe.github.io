@@ -12,9 +12,7 @@
 
   let result: Array<NotionItem>;
 
-  export let data: {
-    result: Array<NotionItem>;
-  };
+  export let data;
 
   beforeUpdate(() => {
     console.log('beforeUpdate execute');
@@ -30,8 +28,8 @@
   });
   console.log('script execute');
 
-  console.log('page data', data.result);
-  result = data.result;
+  console.log('page data', data.body.result);
+  result = data.body.result;
 </script>
 
 <svelte:head>
@@ -45,7 +43,6 @@
   <section class="">
     {#if result}
       {#each result as notionItem}
-        <div>notionItem</div>
         <PostPreview id={notionItem.id} props={notionItem.properties} />
       {/each}
     {/if}

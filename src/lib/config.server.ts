@@ -17,5 +17,3 @@ export const appConfig = {
     author: 'author'
   }
 };
-console.log('env info', import.meta.env);
-console.log('env info2', process.env);
