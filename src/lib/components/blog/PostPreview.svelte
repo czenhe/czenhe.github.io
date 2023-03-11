@@ -15,7 +15,7 @@
 </script>
 
 <div class="post-preview">
-  <a href={`/blog/${id}`}>
+  <a href={`/essay/${id}`}>
     <NotionBlock block={props.title} />
   </a>
   <NotionBlock block={props.tags} />

@@ -1,5 +1,5 @@
-import { getDatabase } from '../../lib/notion';
-import { appConfig } from '../../lib/config.server';
+import { getDatabase } from '$lib/notion';
+import { appConfig } from '$lib/config.server';
 const { databaseId } = appConfig.notion;
 
 /**
