@@ -15,7 +15,7 @@ export const notionClient = new Client({
  * @param databaseId
  * @returns
  */
-export const getDatabase = async (databaseId = notionDatabaseId) => {
+export const getDatabase = async (databaseId = notionDatabaseId.essay) => {
   console.log('token', token);
   console.log('databaseId', databaseId);
   const { results } = await notionClient.databases.query({
