@@ -1,6 +1,5 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { onDestroy } from 'svelte';
   import { afterNavigate } from '$app/navigation';
   let isOpen = false;
   let isVisible = false;
@@ -36,15 +35,6 @@
       <a href="/project">Project</a>
     </li>
   </ul>
-  <!-- <ul class="sub-navigation-items">
-    <li class="sub-navigation-item">
-      <a href="/" target="_blank" rel="noopener noreferrer">Youtube</a>
-    </li>
-    <li class="sub-navigation-item">
-      <a href="/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </li>
-  </ul>
-  <a class="twitter-navigation" href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> -->
 </nav>
 
 <style lang="scss">
@@ -153,9 +143,9 @@
         & > a {
           display: block;
           height: 100%;
+          color: var(--color-theme-3);
           font-size: 32px;
           line-height: 40px;
-          color: var(--color-theme-3);
         }
       }
       &.is-visible {
