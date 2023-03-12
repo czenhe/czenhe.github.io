@@ -1,5 +1,8 @@
 <script context="module" lang="ts">
   import type { Block } from './notion.types';
+  import type { BlockNumberedListItem } from './NotionBlockNumberedList.svelte';
+  import type { BlockBulletedListItem } from './NotionBlockBulletedList.svelte';
+  import type { BlockToggleListItem } from './NotionBlockToggleList.svelte';
 </script>
 
 <script lang="ts">
@@ -13,7 +16,7 @@
   import NotionBlockBulletedList from './NotionBlockBulletedList.svelte';
   import NotionBlockToggleList from './NotionBlockToggleList.svelte';
 
-  export let block: Block;
+  export let block: Block & BlockNumberedListItem & BlockBulletedListItem & BlockToggleListItem;
 </script>
 
 {#if block.type == 'title'}
@@ -35,5 +38,17 @@
 {:else if block.type == 'toggle'}
   <NotionBlockToggleList {block} />
 {:else}
-  <!-- handle more types (to_do)  -->
+  <!-- <ul>
+    <li>object: {block.object}</li>
+    <li>id: {block.id}</li>
+    <li>parent: {JSON.stringify(block.parent)}</li>
+    <li>created_time: {block.created_time}</li>
+    <li>last_edited_time: {block.last_edited_time}</li>
+    <li>created_by: {JSON.stringify(block.created_by)}</li>
+    <li>last_edited_by: {JSON.stringify(block.last_edited_by)}</li>
+    <li>has_children: {block.has_children}</li>
+    <li>archived: {block.archived}</li>
+    <li>type: {block.type}</li>
+    <li>{JSON.stringify(block[block.type])}</li>
+  </ul> -->
 {/if}

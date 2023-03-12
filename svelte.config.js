@@ -13,6 +13,7 @@ const config = {
 
     alias: {
       $lib: path.resolve('./src/lib'),
+      $notion: path.resolve('./src/lib/notion'),
       $components: path.resolve('./src/lib/components'),
       $layouts: path.resolve('./src/lib/layouts'),
       $utils: path.resolve('./src/lib/utils'),

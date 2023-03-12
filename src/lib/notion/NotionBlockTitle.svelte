@@ -17,7 +17,4 @@
 </h3>
 
 <style lang="postcss">
-  .notion__title {
-    @apply font-bold text-2xl;
-  }
 </style>

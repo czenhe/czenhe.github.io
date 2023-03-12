@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   import type { BlockRichText } from './notion.types';
   export type BlockHeading = {
-    text: Array<BlockRichText>;
+    rich_text: Array<BlockRichText>;
   };
   export type BlockHeadingType = 'heading_1' | 'heading_2' | 'heading_3';
 </script>
@@ -14,15 +14,15 @@
 
 {#if type === 'heading_1'}
   <h1 class="notion__block-type notion__heading notion__heading--h1">
-    <NotionBlockRichText block={block.text} />
+    <NotionBlockRichText block={block.rich_text} />
   </h1>
 {:else if type === 'heading_2'}
   <h2 class="notion__block-type notion__heading notion__heading--h2">
-    <NotionBlockRichText block={block.text} />
+    <NotionBlockRichText block={block.rich_text} />
   </h2>
 {:else}
   <h3 class="notion__block-type notion__heading notion__heading--h3">
-    <NotionBlockRichText block={block.text} />
+    <NotionBlockRichText block={block.rich_text} />
   </h3>
 {/if}
 

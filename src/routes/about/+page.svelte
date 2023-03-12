@@ -8,23 +8,27 @@
 </svelte:head>
 
 <section class="section-column">
-  <h1>About Czenhe.me</h1>
+  <h1 class="pageTitle">Czenhe + me</h1>
 
   <div class="block">
-    <p>{@html $t('about.text1')}</p>
-    <p>{@html $t('about.text2')}</p>
-    <p>{@html $t('about.text3')}</p>
+    <ul>
+      <li>・Czenhe</li>
+      <li>・Front-end Engineer / UI/UX based in Tokyo</li>
+      <li />
+    </ul>
   </div>
 </section>
 
 <style lang="scss">
   .block {
-    width: calc(100% - 2em);
+    width: 100%;
     max-width: 740px;
     margin: 0 auto;
     padding: 1em 2em;
     border-radius: 12px;
-    background-color: white;
     box-sizing: border-box;
+  }
+  ul > li {
+    line-height: 2rem;
   }
 </style>

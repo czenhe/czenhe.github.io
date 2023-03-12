@@ -45,3 +45,7 @@ export const getAsSensiblyStructuredBlocks = (result: any) => {
   }
   return ret;
 };
+
+export const getPublishedPost = (posts: any) => {
+  return posts.filter((post) => post.properties.published.checkbox === true);
+};

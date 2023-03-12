@@ -18,13 +18,14 @@
   <a href={`/essay/${id}`}>
     <NotionBlock block={props.title} />
   </a>
-  <NotionBlock block={props.tags} />
-  <NotionBlock block={props.summary} />
-  <NotionBlock block={props.author} />
 </div>
 
 <style lang="postcss">
   .post-preview {
-    @apply mb-6;
+    border-bottom: 1px solid var(--color-theme-1);
+    @apply pt-3 pb-3;
+  }
+  a:hover {
+    text-decoration: none;
   }
 </style>

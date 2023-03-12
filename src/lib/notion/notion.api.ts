@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
 import { appConfig } from '../config.server';
 
-const { token, databaseId } = appConfig.notion;
+const { token } = appConfig.notion;
 
 /**
  * Initialize the Notion client
@@ -29,6 +29,16 @@ export const getDatabase = async (databaseId: string) => {
  */
 export const getPage = async (pageId: string) =>
   await notionClient.pages.retrieve({ page_id: pageId });
+
+/**
+ *
+ * @param pageId
+ * @returns
+ */
+export const getPageTitle = async (pageId: string): Promise<string> => {
+  const page = await getPage(pageId);
+  return page.properties.title.title[0].text.content;
+};
 
 /**
  *

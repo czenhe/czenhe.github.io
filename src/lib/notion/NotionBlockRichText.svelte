@@ -18,9 +18,11 @@
       : ''} notion__block-type notion__rich-text-item"
   >
     {#if blockItem.text.link}
-      <a href={blockItem.text.link.url} title={blockItem.text.content}>{blockItem.text.content}</a>
+      <a href={blockItem.text.link.url} title={blockItem.text.content}>
+        {@html blockItem.text.content.replaceAll('\n', '<br />')}
+      </a>
     {:else}
-      {blockItem.text.content}
+      {@html blockItem.text.content.replaceAll('\n', '<br />')}
     {/if}
   </span>
 {/each}

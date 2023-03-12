@@ -28,8 +28,7 @@
   });
   console.log('script execute');
 
-  console.log('page data', data.body.result);
-  result = data.body.result;
+  result = data.result;
 </script>
 
 <svelte:head>
@@ -38,13 +37,24 @@
 </svelte:head>
 
 <section class="section-column">
-  <h1>Essay</h1>
+  <h1 class="pageTitle">Essay</h1>
 
-  <section class="">
+  <div class="block">
     {#if result}
       {#each result as notionItem}
+        <!-- {JSON.stringify(notionItem)} -->
         <PostPreview id={notionItem.id} props={notionItem.properties} />
       {/each}
     {/if}
-  </section>
+  </div>
 </section>
+
+<style lang="scss">
+  .block {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 1em 2em;
+    box-sizing: border-box;
+  }
+</style>

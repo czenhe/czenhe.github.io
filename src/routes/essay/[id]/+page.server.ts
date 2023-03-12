@@ -1,14 +1,19 @@
-import { getBlocks, getSupportedBlocks, getAsSensiblyStructuredBlocks } from '$lib/notion';
+import {
+  getPageTitle,
+  getBlocks,
+  getSupportedBlocks,
+  getAsSensiblyStructuredBlocks
+} from '$notion';
 
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
-export async function load({ params }) {
+export async function load({ params }: { params: any }) {
   const { id } = params;
+  const postTitle = await getPageTitle(id);
   const result = await getBlocks(id);
   return {
-    body: {
-      result: getAsSensiblyStructuredBlocks(getSupportedBlocks(result))
-    }
+    result: getAsSensiblyStructuredBlocks(getSupportedBlocks(result)),
+    title: postTitle
   };
 }

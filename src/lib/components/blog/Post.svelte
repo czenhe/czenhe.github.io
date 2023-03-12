@@ -1,9 +1,9 @@
 <script context="module" lang="ts">
-  import type { Block } from '$lib/notion';
+  import type { Block } from '$notion';
 </script>
 
 <script lang="ts">
-  import NotionBlock from '$lib/notion/NotionBlock.svelte';
+  import NotionBlock from '$notion/NotionBlock.svelte';
   export let props: Array<Block>;
 </script>
 
