@@ -25,8 +25,8 @@
     <li class="navigation-item" aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
       <a href="/essay">Essay</a>
     </li>
-    <li class="navigation-item" aria-current={$page.url.pathname === '/study' ? 'page' : undefined}>
-      <a href="/study">Study</a>
+    <li class="navigation-item">
+      <a href="https://devlog.czenhe.me/" target="_blank" rel="noreferrer">Study</a>
     </li>
     <li class="navigation-item">
       <a href="https://theafterhours.page/" target="_blank" rel="noreferrer">Project</a>
