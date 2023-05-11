@@ -17,7 +17,7 @@
 </script>
 
 <nav class="menu-button {isOpen ? 'is-open' : ''}" on:click={switchOpen} aria-hidden="true" />
-<nav class="navigation js-menu {isVisible ? 'is-visible' : ''}">
+<nav class="navigation {isVisible ? 'is-visible' : ''}">
   <ul class="navigation-items">
     <li class="navigation-item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
       <a href="/about">About</a>
