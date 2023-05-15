@@ -35,7 +35,7 @@
     width: 100%;
     height: 100%;
     padding: 128px 20px 20px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--color-bg-1);
     transition: all 500ms 0s ease-in-out;
     opacity: 0;
     &-items {
