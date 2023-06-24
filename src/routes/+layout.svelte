@@ -27,7 +27,7 @@
     width: 100%;
     max-width: 64rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 100px 1rem 1rem;
     box-sizing: border-box;
     flex: 1;
     flex-direction: column;

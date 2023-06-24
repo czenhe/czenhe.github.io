@@ -1,5 +1,4 @@
 <script lang="ts">
-  import logo from '$lib/images/lion.png';
   import GlobalNav from './GlobalNav.svelte';
   import { afterNavigate } from '$app/navigation';
   let isOpen = false;
@@ -22,7 +21,6 @@
     <nav class="menu-button {isOpen ? 'is-open' : ''}" on:click={switchOpen} aria-hidden="true" />
     <div class="logo">
       <a href="/" class={isOpen ? 'is-open' : ''}>
-        <!-- <img src={logo} alt="lion" width="60" /> -->
         <span>czenhe + me</span>
       </a>
     </div>
