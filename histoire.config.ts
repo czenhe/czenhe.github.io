@@ -1,6 +1,6 @@
 import { defineConfig } from 'histoire';
-import { HstSvelte } from '@histoire/plugin-svelte';
+import { HstVue } from '@histoire/plugin-vue';
 
 export default defineConfig({
-  plugins: [HstSvelte()],
+  plugins: [HstVue()],
 });
