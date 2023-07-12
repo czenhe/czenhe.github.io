@@ -1,54 +1,63 @@
-# czenhe.me
+# Nuxt 3 Minimal Starter
 
-SvelteKit을 이용한 개인 프로젝트 사이트
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Documents for Development
+## Setup
 
-### Svelte & SvelteKit + TypeScript
-
-### Vite
-
-### ESLint Prettier Husky
-
-### Histoire
-
-### Notion & NotionAPI
-
-### E2E Test Cypress
-
-### axios
-
-### i18n
-
-### Github pages
-
-### Domain Setting
-
-- CNAME
-
-### SEO
-
-- svelte seo
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Make sure to install the dependencies:
 
 ```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
 ```
 
-## Building
+## Production
 
-To create a production version of your app:
+Build the application for production:
 
 ```bash
+# npm
 npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
 ```
 
-You can preview the production build with `npm run preview`.
+Locally preview production build:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
