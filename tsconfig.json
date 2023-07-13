@@ -1,4 +1,16 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./src/.nuxt/tsconfig.json"
+  "extends": "./src/.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve"
+  },
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"]
 }

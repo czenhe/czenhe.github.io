@@ -6,14 +6,13 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    '@nuxtjs/eslint-config-typescript',
+    '@vue/prettier',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-recommended',
   ],
   overrides: [
     {
-      env: {
-        node: true,
-      },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
         sourceType: 'script',
@@ -26,5 +25,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'vue'],
-  rules: {},
+  rules: {
+    'vue/no-v-model-argument': 0,
+  },
 };

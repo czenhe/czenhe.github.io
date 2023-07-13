@@ -18,6 +18,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@histoire/plugin-nuxt": "^0.16.2",
     "@histoire/plugin-vue": "^0.16.1",
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
