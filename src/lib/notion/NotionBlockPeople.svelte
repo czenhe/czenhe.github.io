@@ -1,8 +1,5 @@
 <script context="module" lang="ts">
-  export type BlockPeople = {
-    name: string;
-    avatar_url: string;
-  };
+  import type { BlockPeople } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -18,11 +15,16 @@
   {/each}
 </h3>
 
-<style lang="postcss">
+<style lang="scss">
   .notion__people {
-    @apply flex text-sm;
+    display: flex;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
   }
   img {
-    @apply w-8 h-8 rounded-md ring-1 ring-gray-300;
+    width: 2rem; /* 32px */
+    height: 2rem; /* 32px */
+    border-radius: 0.375rem; /* 6px */
+    box-shadow: inset 0 0 0 2px rgb(209 213 219);
   }
 </style>

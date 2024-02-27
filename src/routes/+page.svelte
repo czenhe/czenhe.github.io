@@ -1,15 +1,26 @@
 <script>
-  import { onMount } from 'svelte';
-  import logo from '$lib/images/lion.png';
+  import { beforeUpdate, onMount, onDestroy, afterUpdate } from 'svelte';
+
+  onMount(() => {
+    console.log('onMount');
+  });
+  beforeUpdate(() => {
+    console.log('beforeUpdate');
+  });
+  afterUpdate(() => {
+    console.log('afterUpdate');
+  });
+  onDestroy(() => {
+    console.log('onDestroy');
+  });
+  console.log('script');
 </script>
 
 <svelte:head>
   <title>Czenhe + me</title>
   <meta name="description" content="Czenhe's portfolio site" />
 </svelte:head>
-<div class="contents">
-  <!-- <img src={logo} alt="lion" width="400" /> -->
-</div>
+<div class="contents" />
 
 <style lang="scss">
   .contents {

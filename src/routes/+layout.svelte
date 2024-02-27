@@ -2,7 +2,6 @@
   import Header from '$components/layout/Header.svelte';
   import Footer from '$components/layout/Footer.svelte';
   import '$styles/styles.css';
-  import '$styles/app.css';
 </script>
 
 <div class="app">
@@ -15,7 +14,7 @@
   <Footer />
 </div>
 
-<style lang="postcss">
+<style lang="scss">
   .app {
     display: flex;
     min-height: 100vh;

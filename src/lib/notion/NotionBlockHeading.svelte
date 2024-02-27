@@ -1,9 +1,5 @@
 <script context="module" lang="ts">
-  import type { BlockRichText } from './notion.types';
-  export type BlockHeading = {
-    rich_text: Array<BlockRichText>;
-  };
-  export type BlockHeadingType = 'heading_1' | 'heading_2' | 'heading_3';
+  import type { BlockHeading, BlockHeadingType } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -26,17 +22,20 @@
   </h3>
 {/if}
 
-<style lang="postcss">
+<style lang="scss">
   .notion__heading {
-    @apply font-bold;
+    font-weight: 700;
   }
-  .notion__heading--h1 {
-    @apply text-3xl;
+  h1.notion__heading--h1 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
   }
-  .notion__heading--h2 {
-    @apply text-2xl;
+  h2.notion__heading--h2 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
   }
-  .notion__heading--h3 {
-    @apply text-xl;
+  h3.notion__heading--h3 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
   }
 </style>

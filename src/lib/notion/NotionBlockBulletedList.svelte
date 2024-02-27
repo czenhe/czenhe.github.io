@@ -1,15 +1,5 @@
 <script context="module" lang="ts">
-  import type { BlockRichText } from './notion.types';
-  export type BlockBulletedListItem = {
-    bulleted_list_item: {
-      text: Array<BlockRichText>;
-    };
-    siblings: Array<{
-      bulleted_list_item: {
-        text: Array<BlockRichText>;
-      };
-    }>;
-  };
+  import type { BlockBulletedListItem } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -30,8 +20,8 @@
   {/if}
 </ul>
 
-<style lang="postcss">
+<style lang="scss">
   .notion__bulleted-list {
-    @apply list-disc;
+    list-style-type: disc;
   }
 </style>

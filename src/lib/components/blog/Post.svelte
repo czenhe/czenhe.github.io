@@ -1,10 +1,17 @@
 <script context="module" lang="ts">
-  import type { Block } from '$notion';
+  import type {
+    Block,
+    BlockNumberedListItem,
+    BlockBulletedListItem,
+    BlockToggleListItem
+  } from '$notion';
 </script>
 
 <script lang="ts">
   import NotionBlock from '$notion/NotionBlock.svelte';
-  export let props: Array<Block>;
+  export let props: Array<
+    Block & BlockNumberedListItem & BlockBulletedListItem & BlockToggleListItem
+  >;
 </script>
 
 <div class="post">
@@ -14,5 +21,5 @@
   {/each}
 </div>
 
-<style lang="postcss">
+<style lang="scss">
 </style>

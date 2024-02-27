@@ -25,3 +25,62 @@ export type BlockRichText = {
     color: NotionColor;
   };
 };
+
+export type BlockNumberedListItem = {
+  numbered_list_item: {
+    text: Array<BlockRichText>;
+  };
+  siblings: Array<{
+    numbered_list_item: {
+      text: Array<BlockRichText>;
+    };
+  }>;
+};
+
+export type BlockPeople = {
+  name: string;
+  avatar_url: string;
+};
+
+export type BlockBulletedListItem = {
+  bulleted_list_item: {
+    text: Array<BlockRichText>;
+  };
+  siblings: Array<{
+    bulleted_list_item: {
+      text: Array<BlockRichText>;
+    };
+  }>;
+};
+
+export type BlockHeading = {
+  rich_text: Array<BlockRichText>;
+};
+export type BlockHeadingType = 'heading_1' | 'heading_2' | 'heading_3';
+
+export type BlockParagraph = {
+  rich_text: Array<BlockRichText>;
+};
+
+export type BlockTag = {
+  id: string;
+  name: string;
+  color: string;
+};
+
+export type BlockTitle = {
+  text: {
+    content: string;
+  };
+};
+
+export type BlockToggleListItem = {
+  toggle: {
+    text: Array<BlockRichText>;
+  };
+  siblings: Array<{
+    toggle: {
+      text: Array<BlockRichText>;
+    };
+  }>;
+};

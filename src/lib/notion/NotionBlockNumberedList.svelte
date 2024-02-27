@@ -1,15 +1,5 @@
 <script context="module" lang="ts">
-  import type { BlockRichText } from './notion.types';
-  export type BlockNumberedListItem = {
-    numbered_list_item: {
-      text: Array<BlockRichText>;
-    };
-    siblings: Array<{
-      numbered_list_item: {
-        text: Array<BlockRichText>;
-      };
-    }>;
-  };
+  import type { BlockNumberedListItem } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -30,8 +20,8 @@
   {/if}
 </ol>
 
-<style lang="postcss">
+<style lang="scss">
   .notion__numbered-list {
-    @apply list-decimal;
+    list-style-type: decimal;
   }
 </style>

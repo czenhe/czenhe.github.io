@@ -1,8 +1,10 @@
 <script context="module" lang="ts">
-  import type { Block } from './notion.types';
-  import type { BlockNumberedListItem } from './NotionBlockNumberedList.svelte';
-  import type { BlockBulletedListItem } from './NotionBlockBulletedList.svelte';
-  import type { BlockToggleListItem } from './NotionBlockToggleList.svelte';
+  import type {
+    Block,
+    BlockNumberedListItem,
+    BlockBulletedListItem,
+    BlockToggleListItem
+  } from './notion.types';
 </script>
 
 <script lang="ts">

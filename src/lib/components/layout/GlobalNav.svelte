@@ -5,17 +5,17 @@
 
 <nav class="navigation js-menu {isVisible ? 'is-visible' : ''}">
   <ul class="navigation-items">
-    <li class="navigation-item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-      <a href="/about">About</a>
-    </li>
     <li class="navigation-item" aria-current={$page.url.pathname === '/essay' ? 'page' : undefined}>
       <a href="/essay">Essay</a>
+    </li>
+    <li class="navigation-item">
+      <a href="https://day-to-day.tokyo/" target="_blank" rel="noreferrer">[blog]도쿄를 걷는다</a>
     </li>
     <li class="navigation-item">
       <a href="https://devlog.czenhe.me/" target="_blank" rel="noreferrer">Study</a>
     </li>
     <li class="navigation-item">
-      <a href="https://theafterhours.page/" target="_blank" rel="noreferrer">Project</a>
+      <a href="https://project.czenhe.me/" target="_blank" rel="noreferrer">Project</a>
     </li>
   </ul>
 </nav>
@@ -46,7 +46,7 @@
       border-radius: 0;
     }
     &-item {
-      margin-top: 16px;
+      margin-top: 32px;
       margin-right: 0;
       margin-left: 0;
       padding-top: 0;
@@ -58,7 +58,7 @@
         display: block;
         height: 100%;
         color: var(--color-theme-3);
-        font-size: 32px;
+        font-size: 24px;
         line-height: 40px;
       }
     }

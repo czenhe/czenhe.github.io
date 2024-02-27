@@ -15,13 +15,10 @@ const config = {
       $lib: path.resolve('./src/lib'),
       $notion: path.resolve('./src/lib/notion'),
       $components: path.resolve('./src/lib/components'),
-      $layouts: path.resolve('./src/lib/layouts'),
       $utils: path.resolve('./src/lib/utils'),
-      $styles: path.resolve('./src/lib/styles'),
-      $stores: path.resolve('./src/lib/stores'),
-      $services: path.resolve('./src/lib/services'),
       $types: path.resolve('./src/lib/types'),
-      $images: path.resolve('./src/lib/images')
+      $styles: path.resolve('./src/assets/styles'),
+      $images: path.resolve('./src/assets/images')
     }
   }
 };

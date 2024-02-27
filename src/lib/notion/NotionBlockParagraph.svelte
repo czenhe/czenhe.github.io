@@ -1,8 +1,5 @@
 <script context="module" lang="ts">
-  import type { BlockRichText } from './notion.types';
-  export type BlockParagraph = {
-    rich_text: Array<BlockRichText>;
-  };
+  import type { BlockParagraph } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -18,5 +15,5 @@
   {/if}
 </p>
 
-<style lang="postcss">
+<style lang="scss">
 </style>

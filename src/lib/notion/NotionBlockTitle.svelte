@@ -1,9 +1,5 @@
 <script context="module" lang="ts">
-  export type BlockTitle = {
-    text: {
-      content: string;
-    };
-  };
+  import type { BlockTitle } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -16,5 +12,9 @@
   {/each}
 </h3>
 
-<style lang="postcss">
+<style lang="scss">
+  h3.notion__title {
+    font-weight: 400;
+    margin: 0;
+  }
 </style>

@@ -1,15 +1,5 @@
 <script context="module" lang="ts">
-  import type { BlockRichText } from './notion.types';
-  export type BlockToggleListItem = {
-    toggle: {
-      text: Array<BlockRichText>;
-    };
-    siblings: Array<{
-      toggle: {
-        text: Array<BlockRichText>;
-      };
-    }>;
-  };
+  import type { BlockToggleListItem } from './notion.types';
 </script>
 
 <script lang="ts">

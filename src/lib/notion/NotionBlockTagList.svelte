@@ -1,9 +1,5 @@
 <script context="module" lang="ts">
-  export type BlockTag = {
-    id: string;
-    name: string;
-    color: string;
-  };
+  import type { BlockTag } from './notion.types';
 </script>
 
 <script lang="ts">
@@ -18,11 +14,20 @@
   {/each}
 </ul>
 
-<style lang="postcss">
+<style lang="scss">
   .notion__tag-list {
-    @apply list-none flex gap-1;
+    list-style-type: none;
+    display: flex;
+    gap: 0.25rem; /* 4px */
   }
   .notion__tag {
-    @apply text-sm bg-gray-50 px-2 py-1 rounded-sm;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+    background-color: rgb(249 250 251);
+    padding-left: 0.5rem; /* 8px */
+    padding-right: 0.5rem; /* 8px */
+    padding-top: 0.25rem; /* 4px */
+    padding-bottom: 0.25rem; /* 4px */
+    border-radius: 0.125rem; /* 2px */
   }
 </style>

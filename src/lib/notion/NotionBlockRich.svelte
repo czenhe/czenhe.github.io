@@ -11,8 +11,9 @@
   <NotionBlockRichText {block} />
 </p>
 
-<style lang="postcss">
+<style lang="scss">
   .notion__rich {
-    @apply text-lg;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
   }
 </style>

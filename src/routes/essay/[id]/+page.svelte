@@ -1,9 +1,16 @@
 <script lang="ts">
-  import type { Block } from '$notion';
   import Post from '$components/blog/Post.svelte';
+  import type {
+    Block,
+    BlockNumberedListItem,
+    BlockBulletedListItem,
+    BlockToggleListItem
+  } from '$notion';
 
   export let data;
-  export let result: Array<Block> = data.result;
+  export let result: Array<
+    Block & BlockNumberedListItem & BlockBulletedListItem & BlockToggleListItem
+  > = data.result;
 </script>
 
 <section>
@@ -17,7 +24,7 @@
 
 <style lang="scss">
   h2.postTitle {
-    @apply mb-6;
+    margin-bottom: 1.5rem; /* 24px */
   }
   article {
     width: 100%;

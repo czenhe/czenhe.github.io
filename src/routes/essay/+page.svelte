@@ -1,7 +1,6 @@
 <script lang="ts">
   import PostPreview from '$components/blog/PostPreview.svelte';
   import type { PostPreviewProps } from '$components/blog/PostPreview.svelte';
-  import { beforeUpdate, onMount, onDestroy, afterUpdate } from 'svelte';
 
   type NotionItem = {
     id: string;
@@ -13,20 +12,6 @@
   let result: Array<NotionItem>;
 
   export let data;
-
-  beforeUpdate(() => {
-    console.log('beforeUpdate execute');
-  });
-  onMount(async () => {
-    console.log('onMount execute');
-  });
-  afterUpdate(() => {
-    console.log('afterUpdate execute');
-  });
-  onDestroy(() => {
-    console.log('onDestroy execute');
-  });
-  console.log('script execute');
 
   result = data.result;
 </script>
@@ -54,7 +39,6 @@
     width: 100%;
     max-width: 740px;
     margin: 0 auto;
-    padding: 1em 2em;
     box-sizing: border-box;
   }
 </style>

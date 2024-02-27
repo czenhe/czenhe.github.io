@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Codystar:wght@300;400&family=Fira+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Homemade+Apple&family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+  font-family: LINESeedJPStd;
+  src: local('※'), url(../fonts/LINESeedJP/LINESeedJP_OTF_Rg.woff) format('woff'),
+    url(../fonts/LINESeedJP/LINESeedJP_OTF_Rg.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedJPStd;
+  src: local('※'), url(../fonts/LINESeedJP/LINESeedJP_OTF_Bd.woff) format('woff'),
+    url(../fonts/LINESeedJP/LINESeedJP_OTF_Bd.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedSansStd;
+  src: local('※'), url(../fonts/LINESeedSans/LINESeedSans_W_Rg.woff) format('woff'),
+    url(../fonts/LINESeedSans/LINESeedSans_W_Rg.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedSansStd;
+  src: local('※'), url(../fonts/LINESeedSans/LINESeedSans_W_Bd.woff) format('woff'),
+    url(../fonts/LINESeedSans/LINESeedSans_W_Bd.woff) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedKRStd;
+  src: local('※'), url(../fonts/LINESeedKR/LINESeedKR-Rg.woff) format('woff'),
+    url(../fonts/LINESeedKR/LINESeedKR-Rg.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedKRStd;
+  src: local('※'), url(../fonts/LINESeedKR/LINESeedKR-Bd.woff) format('woff'),
+    url(../fonts/LINESeedKR/LINESeedKR-Bd.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --font-body: LINESeedKRStd, LINESeedSansStd, LINESeedJPStd, Arial, -apple-system, 'Open Sans',
+    sans-serif;
+  --font-mono: 'Fira Mono', monospace;
+  --font-homemade-apple: 'Homemade Apple', cursive;
+  --font-nanum: 'Nanum Pen Script', cursive;
+  --font-caveat: 'Caveat', cursive;
+  --font-codystar: 'Codystar', sans-serif;
+  --font-fredericka: 'Fredericka the Great', serif;
+  --color-bg-0: #f3f0f8;
+  --color-bg-1: rgba(66, 64, 114, 0.8);
+  --color-bg-2: hsl(0, 0%, 100%);
+  --color-theme-1: #fc3e75;
+  --color-theme-2: #424072;
+  --color-theme-3: #f3f0f8;
+  --color-text: rgba(0, 0, 0, 0.7);
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--color-bg-0);
+}
+
+@font-face {
+  font-family: LINESeedJPStd;
+  src: local('※'), url(../fonts/LINESeedJP/LINESeedJP_OTF_Rg.woff) format('woff'),
+    url(../fonts/LINESeedJP/LINESeedJP_OTF_Rg.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedJPStd;
+  src: local('※'), url(../fonts/LINESeedJP/LINESeedJP_OTF_Bd.woff) format('woff'),
+    url(../fonts/LINESeedJP/LINESeedJP_OTF_Bd.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedSansStd;
+  src: local('※'), url(../fonts/LINESeedSans/LINESeedSans_W_Rg.woff) format('woff'),
+    url(../fonts/LINESeedSans/LINESeedSans_W_Rg.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedSansStd;
+  src: local('※'), url(../fonts/LINESeedSans/LINESeedSans_W_Bd.woff) format('woff'),
+    url(../fonts/LINESeedSans/LINESeedSans_W_Bd.woff) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedKRStd;
+  src: local('※'), url(../fonts/LINESeedKR/LINESeedKR-Rg.woff) format('woff'),
+    url(../fonts/LINESeedKR/LINESeedKR-Rg.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LINESeedKRStd;
+  src: local('※'), url(../fonts/LINESeedKR/LINESeedKR-Bd.woff) format('woff'),
+    url(../fonts/LINESeedKR/LINESeedKR-Bd.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-bg-0);
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+  font-size: 14px;
+}
+
+h1,
+h2,
+p {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-theme-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h1.pageTitle {
+  margin-bottom: 20px;
+  color: var(--color-theme-1);
+  font-family: var(--font-homemade-apple);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+}
+h2.postTitle {
+  color: var(--color-theme-1);
+  text-align: center;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 0.5em;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 16px;
+}
+
+.section-column {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}

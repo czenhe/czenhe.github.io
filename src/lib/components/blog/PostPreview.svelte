@@ -20,10 +20,10 @@
   </a>
 </div>
 
-<style lang="postcss">
+<style lang="scss">
   .post-preview {
+    padding: 1em 0;
     border-bottom: 1px solid var(--color-theme-1);
-    @apply pt-3 pb-3;
   }
   a:hover {
     text-decoration: none;
